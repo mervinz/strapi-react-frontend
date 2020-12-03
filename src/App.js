@@ -6,22 +6,31 @@ import profilePic from './images/tasks.jpg'
 const fechedTasks = [
   {
     id: 1,
-    name: "web",
-    description: "describe web",
+    name: "Complete frontend challenge",
+    description: "dEasy as pie",
     completed: "false",
     pinned: "false",
   },
   {
-    id: 1,
-    name: "web",
-    description: "describe web",
+    id: 2,
+    name: "Feel awesome",
+    description: "Accomplishing stuff is the best",
+    completed: "false",
+    pinned: "false",
+  },
+  {
+    id: 3,
+    name: "Join an awesome team",
+    description: "Friends, coffee and building stuff",
     completed: "false",
     pinned: "false",
   },
 ];
 // const [showModal, setShowModal] = React.useState(false);
 
+
 function App() {
+  
   return (
     <div className="App">
       <div className="container flex mx-auto h-8 mt-4 items-center bg-white">
@@ -87,5 +96,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
