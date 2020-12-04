@@ -19,31 +19,34 @@ function CreateTask(props) {
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
             // onClick={() => setShowModal(false)}
           >
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            <div className="relative w-96 my-6 mx-auto max-w-3xl">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t">
-                  <h3 className="text-3xl  text-gray-900 font-semibold">
-                    Modal Title
+                  <h3 className="text-3xl  text-gray-900 font-normal">
+                    Add task
                   </h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
                   >
-                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-gray-900 text-2xl block outline-none focus:outline-none">
+                    <span className="bg-transparent text-gray-900 h-6 w-6 text-2xl block outline-none focus:outline-none">
                       ×
                     </span>
                   </button>
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
+                  <div className="mb-4">
+                    <input type="text" className="shadow-sm focus:ring-indigo-500 border ml-4 border-gray-500 text-gray-900 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"
+                      placeholder="task name" />
+                      </div>
                 <div className="mt-1">
                     <textarea
-                      id="about"
-                      name="about"
-                      rows="3"
-                      className="shadow-sm focus:ring-indigo-500 text-gray-900 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"
+                      id="description"
+                      name="description"
+                      className="shadow-sm focus:ring-indigo-500 border ml-4 border-gray-500 text-gray-900 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"
                       placeholder="type task description"
                     ></textarea>
                   </div>
