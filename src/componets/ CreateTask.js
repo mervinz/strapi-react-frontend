@@ -2,7 +2,7 @@ import React from "react";
 
 function CreateTask(props) {
   const [showModal, setShowModal] = React.useState(false);
-  const{tasks} = props
+  
   return (
     <>
       <button
@@ -24,27 +24,29 @@ function CreateTask(props) {
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t">
-                  <h3 className="text-3xl font-semibold">
+                  <h3 className="text-3xl  text-gray-900 font-semibold">
                     Modal Title
                   </h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
                   >
-                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-gray-900 text-2xl block outline-none focus:outline-none">
                       ×
                     </span>
                   </button>
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-gray-600 text-lg leading-relaxed">
-                    I always felt like I could do anything. That’s the main
-                    thing people are controlled by! Thoughts- their perception
-                    of themselves! They're slowed down by their perception of
-                    themselves. If you're taught you can’t do anything, you
-                    won’t do anything. I was taught I could do everything.
-                  </p>
+                <div className="mt-1">
+                    <textarea
+                      id="about"
+                      name="about"
+                      rows="3"
+                      className="shadow-sm focus:ring-indigo-500 text-gray-900 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"
+                      placeholder="type task description"
+                    ></textarea>
+                  </div>
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">

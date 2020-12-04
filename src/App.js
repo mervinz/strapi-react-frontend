@@ -1,37 +1,19 @@
 import React from "react";
 import ShowTask from "./componets/ShowTask";
 import CreateTask from "./componets/ CreateTask";
+import CompleteTasks from './componets/Completetasks';
 import profilePic from './images/tasks.jpg'
+import Axios from 'axios';
 
-const fechedTasks = [
-  {
-    id: 1,
-    name: "Complete frontend challenge",
-    description: "dEasy as pie",
-    completed: "false",
-    pinned: "false",
-  },
-  {
-    id: 2,
-    name: "Feel awesome",
-    description: "Accomplishing stuff is the best",
-    completed: "false",
-    pinned: "false",
-  },
-  {
-    id: 3,
-    name: "Join an awesome team",
-    description: "Friends, coffee and building stuff",
-    completed: "false",
-    pinned: "false",
-  },
-];
+
 // const [showModal, setShowModal] = React.useState(false);
 
+class App extends React.Component {
 
-function App() {
-  
-  return (
+  render(){
+    const fechedTasks = this.setState;
+    return (
+     
     <div className="App">
       <div className="container flex mx-auto h-8 mt-4 items-center bg-white">
         <div className="w-1/4 flex">
@@ -52,7 +34,7 @@ function App() {
           </a>
           <a href="#">
           <button className="text-2xl place-items-center hover:text-red-700">
-            pinned tasks
+            pin tasks
           </button>
           </a>
         </div>
@@ -65,29 +47,27 @@ function App() {
         </div>
         <div className="w-1/4">
           <div className="flex items-center">
-          
+
           <img className="h-10 w-10 border-3 rounded-full" src={profilePic} />
-            {/* <img className="rounded-full h-8 w-8" src="./images/tasks.jpg" alt="mypic" /> */}
+
           </div>
         </div>
       </div>
 
       <div className="container mx-auto flex mt-6 p-4">
-        <div className="w-1/6 flex-col">
+        <div className="w-1/8 flex-col">
           <div className="block space-x-2 items-center justify-between">
             <div> </div>
-            <div className="h-8 border-l-2 px-4 border-red-600 hover:text-red-900 text-red-400">
+            <button className="h-8 border-l-2 px-4 border-red-600 hover:text-red-900 text-red-400">
               My tasks
-            </div>
-            <div className="h-8 border-l-2 px-4  border-gray-400">
+            </button>
+            <button className="h-8 border-l-2 mt-4 px-4  border-gray-400">
               Projects
-            </div>
+            </button>
           </div>
         </div>
-        <div className="w-2/3 inline-block items-end justify-between ">
-          
-          
-          <ShowTask tasks={fechedTasks} />
+        <div className="w-3/4 inline-block items-end justify-between ">
+          <ShowTask />
         </div>
         <div className="w-1/6">
           
@@ -95,7 +75,7 @@ function App() {
       </div>
     </div>
   );
+  }
 }
-
 
 export default App;
